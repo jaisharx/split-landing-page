@@ -1,0 +1,21 @@
+.btn {
+    position: absolute;
+    left: 50%;   
+    top: 40%;
+    transform: translateX(-50%);
+
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 18rem;
+    padding: 1.8rem;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
