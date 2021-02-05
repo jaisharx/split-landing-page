@@ -1,19 +1,47 @@
-h1 {
-    margin: 1.6rem;
-    font-size: 8rem;
-    text-align: center;
+:root {
+    --left-bg-color: rgba(87 84 236 / .7);
+    --right-bg-color: rgba(43 43 43 / .8);
+}
 
-    /* gradient text  */
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(
-        45deg,
-        #f09433 0%,
-        #e6683c 25%,
-        #dc2743 50%,
-        #cc2366 75%,
-        #bc1888 100%
-    );
+.container {
+    position: relative;
+    height: 100vh;
+    background: #333;
+
+    display: flex;
+}
+
+.split {
+    width: 50%;
+    height: 100%;
+}
+
+.split.left {
+    background-image: url('/assets/ps.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--left-bg-color);
+    }
+}
+
+.split.right {
+    background-image: url('/assets/xbox.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--right-bg-color);
+    }
 }
